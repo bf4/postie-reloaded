@@ -2,11 +2,12 @@
 include_once (dirname(dirname(dirname(dirname(__FILE__)))) . DIRECTORY_SEPARATOR . "wp-config.php");
 define("POSTIE_ROOT",dirname(__FILE__));
 define("POSTIE_TABLE",$GLOBALS["table_prefix"]. "postie_config");
-define("PURIFIER", "on");  //set to off to not use
+define("PURIFIER", "off");  //to use HTML PURIFIER, set to "on", uncomment the next line, and edit the path
+
+//require_once '/var/www/html/purifier/library/HTMLPurifier.auto.php';
 define("DEFAULT_TAGS", "chicago"); //set comma-separated list of default tags
 //html purifier
-include 
-'/var/www/html/purifier/library/HTMLPurifier.auto.php';
+
  //$config = HTMLPurifier_Config::createDefault();
    // $config->set('Core', 'Encoding', 'UTF-8'); // replace with your encoding
     //$config->set('HTML', 'Doctype', 'XHTML 1.0 Transitional'); // replace with your doctype
